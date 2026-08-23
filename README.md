@@ -1,6 +1,6 @@
 # Ankit Rana — Portfolio
 
-Personal portfolio site for Ankit Rana, Aspiring DevOps Engineer. Built with React, Vite, Tailwind CSS v4, and Framer Motion. Deployed for free on GitHub Pages via GitHub Actions.
+Personal portfolio site for Ankit Rana, final-year B.Sc. IT student and DevOps & Cloud Engineer Intern at DataDrone. Built with React, Vite, Tailwind CSS v4, and Framer Motion. Deployed for free on GitHub Pages via GitHub Actions.
 
 ## Stack
 
