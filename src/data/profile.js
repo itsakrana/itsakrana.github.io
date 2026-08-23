@@ -10,13 +10,16 @@ export const profile = {
   highlightStrip: ['Cloud', 'Automation', 'Containers', 'Infrastructure'],
 
   about: {
-    summary:
-      "I'm a final-year B.Sc. IT student building practical, hands-on experience across cloud infrastructure, containers, and CI/CD automation. My focus is on getting real systems running end-to-end — from writing a pipeline to provisioning infrastructure with code to deploying and observing an application in a cluster.",
+    summary: [
+      "I'm a final-year B.Sc. IT student and DevOps & Cloud Engineer Intern at DataDrone, focused on building and automating reliable cloud infrastructure and deployment workflows.",
+      'I work across AWS and Azure with hands-on experience in Terraform, GitHub Actions, CI/CD, Docker, Kubernetes, and cloud migration. My work involves building secure CI/CD pipelines, provisioning Azure infrastructure with Infrastructure as Code, automating workflows, and contributing to AWS-to-Azure migration initiatives. I also use Claude Code to support infrastructure development and DevOps automation.',
+    ],
     focusAreas: [
       'Cloud Infrastructure',
       'Container Orchestration',
       'CI/CD Automation',
       'Infrastructure as Code',
+      'Claude Code',
     ],
   },
 
@@ -74,9 +77,21 @@ export const profile = {
   ],
 
   certifications: [
-    { name: 'AWS Fundamentals', issuer: 'Coursera' },
-    { name: 'DevOps Foundations', issuer: 'LinkedIn Learning' },
-    { name: 'Getting Started with Kubernetes', issuer: 'LinkedIn Learning' },
+    {
+      name: 'AWS Fundamentals',
+      issuer: 'Coursera',
+      url: 'https://www.coursera.org/account/accomplishments/specialization/IFQCKYZFJHD7',
+    },
+    {
+      name: 'DevOps Foundations',
+      issuer: 'LinkedIn Learning',
+      url: 'https://www.linkedin.com/learning/certificates/dcbd1012cd308f0b3e70ff90e2c952f85cdcb7121b2c7df2c8fa2a29438e964f',
+    },
+    {
+      name: 'Getting Started with Kubernetes',
+      issuer: 'LinkedIn Learning',
+      url: 'https://www.linkedin.com/learning/certificates/88fd0e2589137551982f983ebfbf19b130726c19840af661df8a08c026f245a6',
+    },
   ],
 
   now: {

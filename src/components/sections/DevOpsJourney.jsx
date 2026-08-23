@@ -12,6 +12,7 @@ const STEP_ICONS = {
   terraform: 'Boxes',
   cloud: 'Cloud',
   kubernetes: 'Ship',
+  'ai-assisted': 'Code2',
   current: 'Sparkles',
 }
 

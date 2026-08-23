@@ -62,7 +62,9 @@ export function Skills() {
                   className="group rounded-xl border border-border bg-surface/60 p-4 transition-colors hover:border-brand/40"
                 >
                   <p className="font-semibold text-text">{skill.name}</p>
-                  <p className="mt-1 text-sm text-text-dim">{skill.description}</p>
+                  {skill.description && (
+                    <p className="mt-1 text-sm text-text-dim">{skill.description}</p>
+                  )}
                 </div>
               ))}
             </motion.div>

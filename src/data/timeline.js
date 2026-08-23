@@ -30,6 +30,12 @@ export const journey = [
     description: 'Deployed and managed containerized applications on Kubernetes with Helm and ArgoCD.',
   },
   {
+    id: 'ai-assisted',
+    title: 'AI-Assisted Development',
+    description:
+      'Started using Claude Code to support DevOps workflows, infrastructure development, automation, troubleshooting, and day-to-day engineering tasks.',
+  },
+  {
     id: 'current',
     title: 'Current Focus',
     description: 'Advanced Kubernetes, Azure & production infrastructure practices.',

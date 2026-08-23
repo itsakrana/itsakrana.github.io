@@ -1,4 +1,4 @@
-import { MapPin, GraduationCap, Target, Award } from 'lucide-react'
+import { MapPin, GraduationCap, Target, Award, ExternalLink } from 'lucide-react'
 import { profile } from '../../data'
 import { SectionHeading } from '../ui/SectionHeading'
 import { Card } from '../ui/Card'
@@ -14,17 +14,28 @@ export function About() {
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1fr]">
           <Reveal>
             <Card className="h-full">
-              <p className="text-base leading-relaxed text-text-dim">{profile.about.summary}</p>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {profile.about.focusAreas.map((area) => (
-                  <span
-                    key={area}
-                    className="rounded-full border border-border bg-surface-2 px-3 py-1 text-xs font-medium text-brand"
-                  >
-                    {area}
-                  </span>
+              <div className="space-y-4">
+                {profile.about.summary.map((paragraph, i) => (
+                  <p key={i} className="text-base leading-relaxed text-text-dim">
+                    {paragraph}
+                  </p>
                 ))}
+              </div>
+
+              <div className="mt-8 border-t border-border pt-6">
+                <p className="text-xs font-semibold uppercase tracking-wide text-text-dim">
+                  Areas of Expertise
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {profile.about.focusAreas.map((area) => (
+                    <span
+                      key={area}
+                      className="rounded-full border border-border bg-surface-2 px-3 py-1 text-xs font-medium text-brand"
+                    >
+                      {area}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 text-sm text-text-dim sm:flex-row sm:flex-wrap sm:gap-6">
@@ -81,7 +92,19 @@ export function About() {
                 <StaggerGroup className="mt-4 space-y-2" stagger={0.06}>
                   {profile.certifications.map((cert) => (
                     <StaggerItem key={cert.name} className="text-sm">
-                      <p className="text-text">{cert.name}</p>
+                      <a
+                        href={cert.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-1.5 text-text transition-colors hover:text-brand"
+                      >
+                        {cert.name}
+                        <ExternalLink
+                          size={12}
+                          className="text-text-dim transition-colors group-hover:text-brand"
+                          aria-hidden="true"
+                        />
+                      </a>
                       <p className="text-text-dim">{cert.issuer}</p>
                     </StaggerItem>
                   ))}

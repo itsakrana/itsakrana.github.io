@@ -3,10 +3,11 @@ import { useReducedMotionSafe } from '../../hooks/useReducedMotionSafe'
 import { GlassPanel } from '../ui/GlassPanel'
 
 const LINES = [
-  { cmd: 'whoami', out: 'ankit-rana — aspiring devops engineer' },
-  { cmd: 'kubectl get deployments', out: 'notepad-app   3/3   Running' },
-  { cmd: 'terraform plan', out: '+ 12 to add, 0 to change, 0 to destroy' },
-  { cmd: 'git push origin main', out: 'Deploy pipeline triggered ✓' },
+  { cmd: 'whoami', out: 'ankit-rana' },
+  { cmd: 'role', out: 'DevOps Engineer' },
+  { cmd: 'focus', out: 'Cloud • Infrastructure • Automation' },
+  { cmd: 'stack', out: 'AWS • Azure • Terraform • Docker • Kubernetes • GitHub Actions' },
+  { cmd: 'ai-tools', out: 'Claude Code • AI-assisted DevOps' },
 ]
 
 export function TerminalPanel() {

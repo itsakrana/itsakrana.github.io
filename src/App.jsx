@@ -8,7 +8,6 @@ import { WhatIBuild } from './components/sections/WhatIBuild'
 import { Skills } from './components/sections/Skills'
 import { Projects } from './components/sections/Projects'
 import { DevOpsJourney } from './components/sections/DevOpsJourney'
-import { CurrentlyBuilding } from './components/sections/CurrentlyBuilding'
 import { Contact } from './components/sections/Contact'
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
         <Skills />
         <Projects />
         <DevOpsJourney />
-        <CurrentlyBuilding />
         <Contact />
       </main>
       <Footer />
