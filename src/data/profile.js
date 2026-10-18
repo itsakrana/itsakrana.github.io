@@ -6,7 +6,7 @@ export const profile = {
   email: 'akrana675@gmail.com',
   github: 'https://github.com/itsakrana',
   linkedin: 'https://www.linkedin.com/in/ankit-rana-3a2a05379/',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/AnkitRanaResume.pdf',
   highlightStrip: ['Cloud', 'Automation', 'Containers', 'Infrastructure'],
 
   about: {
