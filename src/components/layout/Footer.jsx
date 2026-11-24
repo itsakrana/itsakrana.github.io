@@ -1,9 +1,10 @@
+import { useState } from 'react'
 import { Mail } from 'lucide-react'
 import { profile } from '../../data'
 import { GitHubIcon, LinkedInIcon } from '../ui/BrandIcons'
 
 export function Footer() {
-  const year = new Date().getFullYear()
+  const [year] = useState(() => new Date().getFullYear())
 
   return (
     <footer className="border-t border-border py-10">

@@ -1,25 +1,26 @@
 export const profile = {
   name: 'Ankit Rana',
-  role: 'Aspiring DevOps Engineer',
-  tagline: 'Building, Automating & Deploying Modern Infrastructure.',
+  role: 'DevOps & Cloud Engineer',
+  tagline: 'Building reliable cloud infrastructure, automated delivery pipelines, and scalable Kubernetes platforms.',
   location: 'Mumbai, India',
   email: 'akrana675@gmail.com',
   github: 'https://github.com/itsakrana',
   linkedin: 'https://www.linkedin.com/in/ankit-rana-3a2a05379/',
   resumeUrl: '/AnkitRana_Resume.pdf',
-  highlightStrip: ['Cloud', 'Automation', 'Containers', 'Infrastructure'],
+  internshipLetterUrl: '/Internship-Completion-Letter-AnkitRana.pdf',
+  highlightStrip: ['AWS & Azure', 'Terraform', 'GitHub Actions', 'Kubernetes'],
 
   about: {
     summary: [
-      "I'm a final-year B.Sc. IT student and DevOps & Cloud Engineer Intern at DataDrone, focused on building and automating reliable cloud infrastructure and deployment workflows.",
-      'I work across AWS and Azure with hands-on experience in Terraform, GitHub Actions, CI/CD, Docker, Kubernetes, and cloud migration. My work involves building secure CI/CD pipelines, provisioning Azure infrastructure with Infrastructure as Code, automating workflows, and contributing to AWS-to-Azure migration initiatives. I also use Claude Code to support infrastructure development and DevOps automation.',
+      "I'm a DevOps and Cloud Engineer focused on automating infrastructure, deployment workflows, and cloud operations.",
+      'My hands-on experience includes AWS-to-Azure migration, Terraform, GitHub Actions, Docker, Kubernetes, monitoring, and DevSecOps practices. I am also pursuing a B.Sc. in Information Technology while building practical, environment-ready infrastructure projects.',
     ],
     focusAreas: [
       'Cloud Infrastructure',
       'Container Orchestration',
       'CI/CD Automation',
       'Infrastructure as Code',
-      'Claude Code',
+      'DevSecOps',
     ],
   },
 
@@ -59,7 +60,7 @@ export const profile = {
       degree: 'B.Sc. Information Technology',
       institution: 'RD & SH National College, Mumbai',
       period: 'Expected 2027',
-      detail: 'CGPA 9.18 / 10',
+      detail: 'CGPA 8.64 / 10',
       current: true,
     },
     {

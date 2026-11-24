@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { ArrowRight, Download } from 'lucide-react'
 import { profile } from '../../data'
 import { scrollToSection } from '../../lib/scrollTo'
@@ -9,17 +10,27 @@ import { TerminalPanel } from './TerminalPanel'
 
 export function Hero() {
   const reduced = useReducedMotionSafe()
+  const roles = ['DevOps Engineer', 'Cloud Engineer', 'Platform Engineer']
+  const [roleIndex, setRoleIndex] = useState(0)
+
+  useEffect(() => {
+    if (reduced) return undefined
+    const timer = window.setInterval(() => {
+      setRoleIndex((index) => (index + 1) % roles.length)
+    }, 2600)
+    return () => window.clearInterval(timer)
+  }, [reduced, roles.length])
 
   return (
     <section id="hero" className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <motion.div
-          className="absolute -top-32 left-1/4 h-[28rem] w-[28rem] rounded-full bg-brand/20 blur-[120px]"
+          className="hero-glow hero-glow-brand absolute -top-32 left-1/4 h-[28rem] w-[28rem] rounded-full bg-brand/20 blur-[120px]"
           animate={reduced ? {} : { x: [0, 40, 0], y: [0, 24, 0] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-          className="absolute top-40 right-1/4 h-[24rem] w-[24rem] rounded-full bg-accent/10 blur-[120px]"
+          className="hero-glow hero-glow-accent absolute top-40 right-1/4 h-[24rem] w-[24rem] rounded-full bg-accent/10 blur-[120px]"
           animate={reduced ? {} : { x: [0, -30, 0], y: [0, -20, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
         />
@@ -33,7 +44,18 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="font-mono text-sm font-semibold uppercase tracking-[0.2em] text-brand"
           >
-            {profile.role}
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={roles[roleIndex]}
+                initial={reduced ? false : { opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={reduced ? undefined : { opacity: 0, y: -8 }}
+                transition={{ duration: 0.35 }}
+                className="inline-block"
+              >
+                {roles[roleIndex]}
+              </motion.span>
+            </AnimatePresence>
           </motion.p>
 
           <motion.h1
@@ -84,7 +106,7 @@ export function Hero() {
             <Button
               as="a"
               href={profile.resumeUrl}
-              download
+              download="AnkitRana_Resume.pdf"
               variant="secondary"
               icon={Download}
               iconPosition="left"

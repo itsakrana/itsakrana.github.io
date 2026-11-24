@@ -33,7 +33,7 @@ export const journey = [
     id: 'ai-assisted',
     title: 'AI-Assisted Development',
     description:
-      'Started using Claude Code to support DevOps workflows, infrastructure development, automation, troubleshooting, and day-to-day engineering tasks.',
+      'Using Claude Code and GitHub Copilot to support infrastructure development, automation, troubleshooting, and day-to-day engineering workflows.',
   },
   {
     id: 'current',

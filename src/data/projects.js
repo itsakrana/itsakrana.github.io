@@ -1,43 +1,52 @@
 export const projects = [
   {
-    slug: 'crud-review-devsecops',
-    title: 'CRUD Review',
-    subtitle: 'Cloud Infrastructure & DevSecOps Engineering',
-    confidential: true,
-    badge: 'Professional Work · Confidential',
+    slug: 'ai-powered-ci-cd',
+    title: 'AI-Powered CI/CD Pipeline',
+    subtitle: 'DevSecOps Automation & AI-Generated Pipeline Insights',
+    confidential: false,
+    badge: null,
     shortDescription:
-      'Hands-on engineering contribution across DevSecOps, CI/CD security automation, cloud migration, and Infrastructure as Code on a real production application.',
-    repoUrl: null,
-    repoLabel: 'Private / Confidential',
-    tags: ['GitHub Actions', 'Trivy', 'CodeQL', 'AWS', 'Azure', 'Terraform', 'Mobile CI/CD', 'Claude Code'],
+      'A GitHub Actions pipeline that tests, checks code quality, scans security and dependencies, then uses Google Gemini to publish a live engineering health dashboard.',
+    repoUrl: 'https://github.com/itsakrana/AI-Powered-CI-CD.git',
+    repoLabel: 'GitHub',
+    tags: [
+      'GitHub Actions',
+      'Python',
+      'FastAPI',
+      'pytest',
+      'Flake8',
+      'Bandit',
+      'pip-audit',
+      'Google Gemini',
+      'GitHub Pages',
+    ],
     metrics: [],
     highlights: [
-      'Added Trivy and CodeQL scanning to GitHub Actions workflows to improve automated security posture',
-      'Built GitHub Actions automation for iOS and Android build/deployment workflows',
-      'Worked on infrastructure migration from DigitalOcean to AWS',
-      'Designed and created Azure infrastructure using Terraform',
-      'Used Claude Code as part of an AI-assisted engineering workflow',
+      'Runs pytest with an enforced 80% code-coverage gate and generates a test report.',
+      'Runs Flake8, Bandit, and pip-audit checks and publishes their reports.',
+      'Uses Google Gemini to summarize pipeline health and provide prioritized recommendations.',
+      'Publishes a dashboard with pipeline status, risk observations, test results, coverage, and report links.',
+      'Uses retries and model fallback for AI analysis so report delivery can continue during AI API issues.',
     ],
     caseStudy: {
       overview:
-        'CRUD Review is a real, professional production application. Because it is confidential, this case study describes my engineering contribution at a high level only — no company name, internal architecture, business logic, or private URLs are shown.',
+        'An end-to-end DevSecOps pipeline built with GitHub Actions. It combines test, quality, security, and dependency checks, then creates AI-generated insights and publishes a dashboard to GitHub Pages.',
       problem:
-        'The project needed stronger automated security coverage in its CI/CD pipelines, more reliable mobile build/deployment automation, and a path off DigitalOcean onto AWS, alongside new Azure infrastructure provisioned as code.',
+        'A failed build provides limited context to teammates about pipeline health, security findings, and what to address next.',
       contribution:
-        'I worked hands-on across four areas: (1) DevSecOps — adding Trivy and CodeQL scanning into GitHub Actions workflows to catch vulnerabilities and code issues automatically; (2) Mobile CI/CD — building GitHub Actions automation for iOS and Android build/deployment workflows; (3) Cloud migration — contributing to the move of infrastructure and deployment components from DigitalOcean to AWS; (4) Infrastructure as Code — designing and creating Azure infrastructure using Terraform. Claude Code was used throughout as an AI-assisted tool for implementation, automation, and troubleshooting.',
+        'Built a multi-stage workflow for pytest and coverage enforcement, Flake8, Bandit, and pip-audit. The workflow passes a shared status artifact between jobs, sends combined results to Google Gemini for a plain-language summary, and publishes reports and a dashboard to GitHub Pages.',
       challenges:
-        'Working across DevSecOps tooling, mobile CI/CD, and two different cloud providers (AWS and Azure) in the same project required keeping automation consistent while respecting the constraints and secrets boundaries of a live, confidential production system.',
+        'Keeping findings visible without blocking report delivery, preserving shared pipeline status across jobs, and handling transient AI API failures with retry, backoff, and model fallback.',
       learned:
-        'Practical experience integrating security scanning into real CI/CD pipelines, automating mobile build workflows, executing a cloud migration, and provisioning cloud infrastructure as code with Terraform — all under real-world confidentiality constraints.',
+        'How to combine CI quality gates, static analysis, security and dependency scanning, artifact handoffs, and AI-generated reporting in one automated delivery workflow.',
       architecture: {
         nodes: [
-          { id: 'commit', label: 'Code Commit', icon: 'GitBranch' },
-          { id: 'actions', label: 'GitHub Actions', icon: 'Workflow' },
-          { id: 'trivy', label: 'Trivy Scan', icon: 'ShieldCheck' },
-          { id: 'codeql', label: 'CodeQL Analysis', icon: 'Search' },
-          { id: 'mobile', label: 'Mobile Build (iOS/Android)', icon: 'Smartphone' },
-          { id: 'aws', label: 'AWS Infrastructure', icon: 'Cloud' },
-          { id: 'azure', label: 'Azure via Terraform', icon: 'Boxes' },
+          { id: 'tests', label: 'pytest + Coverage Gate', icon: 'CheckCircle2' },
+          { id: 'lint', label: 'Flake8', icon: 'FileCheck2' },
+          { id: 'security', label: 'Bandit + pip-audit', icon: 'ShieldCheck' },
+          { id: 'status', label: 'Shared Status Artifact', icon: 'Package' },
+          { id: 'ai', label: 'Gemini Analysis', icon: 'Sparkles' },
+          { id: 'pages', label: 'GitHub Pages Dashboard', icon: 'Globe' },
         ],
       },
     },
@@ -129,127 +138,43 @@ export const projects = [
     },
   },
   {
-    slug: 'terraform-aws-multi-env',
-    title: 'Terraform AWS Infrastructure',
-    subtitle: 'Production-Grade Multi-Environment IaC',
+    slug: 'microservices-cicd',
+    title: 'Kubernetes Microservices DevOps Pipeline',
+    subtitle: 'Terraform, GitOps & Local Cloud Emulation',
     confidential: false,
     badge: null,
     shortDescription:
-      'Reusable Terraform modules provisioning isolated Dev and Prod AWS infrastructure from a single, consistent codebase.',
-    repoUrl: 'https://github.com/itsakrana/Terraform-AWS-Multi-Env.git',
+      'A local DevOps pipeline for three FastAPI microservices using Terraform, Floci, Docker, kind, Helm, Argo CD, and GitHub Actions.',
+    repoUrl: 'https://github.com/itsakrana/k8s-microservices-terraform.git',
     repoLabel: 'GitHub',
-    tags: ['Terraform', 'AWS', 'VPC', 'EC2', 'S3', 'DynamoDB', 'IAM', 'Security Groups'],
+    tags: ['Terraform', 'Floci', 'Docker', 'Kubernetes', 'Helm', 'Argo CD', 'Prometheus', 'Grafana', 'GitHub Actions'],
     metrics: [],
     highlights: [
-      'Built a production-grade IaC solution provisioning scalable AWS infrastructure across Dev and Prod',
-      'Designed reusable Terraform modules for VPC, EC2, S3, DynamoDB, Security Groups, and Key Pairs',
-      'Implemented secure Dev/Prod environment isolation',
-      'Automated infrastructure provisioning and lifecycle management with Terraform',
-      'Improved deployment consistency and minimized manual infrastructure configuration',
+      'Built a local pipeline for three FastAPI microservices using Terraform and Floci',
+      'Provisioned AWS-compatible VPC, ECR, EKS, S3, and DynamoDB infrastructure with reusable Terraform modules',
+      'Deployed services to kind using Helm',
+      'Implemented GitOps with Argo CD and observability with Prometheus and Grafana',
+      'Applied Kubernetes NetworkPolicies and CI validation with GitHub Actions',
     ],
     caseStudy: {
       overview:
-        'An Infrastructure as Code solution that provisions and manages AWS infrastructure across two isolated environments — Dev and Prod — from a single, reusable Terraform module set.',
-      problem:
-        'Manually configuring AWS infrastructure per environment was inconsistent and left Dev and Prod prone to configuration drift.',
-      contribution:
-        'I built reusable Terraform modules for VPC, EC2, S3, DynamoDB, Security Groups, and Key Pairs, and used them to provision fully isolated Dev and Prod environments. Infrastructure provisioning and lifecycle management were automated through Terraform workflows instead of manual console changes.',
-      challenges:
-        'Structuring modules generic enough to be reused across Dev and Prod while still enforcing real isolation between the two environments (networking, access, resource naming).',
-      learned:
-        'How to design reusable, composable Terraform modules and use environment isolation patterns to keep infrastructure consistent and auditable across environments.',
-      architecture: {
-        nodes: [
-          { id: 'root', label: 'Root Module', icon: 'FolderTree' },
-          { id: 'vpc', label: 'VPC', icon: 'Network' },
-          { id: 'ec2', label: 'EC2', icon: 'Server' },
-          { id: 's3', label: 'S3', icon: 'Database' },
-          { id: 'dynamodb', label: 'DynamoDB', icon: 'Database' },
-          { id: 'iam', label: 'IAM & Security Groups', icon: 'Lock' },
-          { id: 'envs', label: 'Dev / Prod Isolation', icon: 'GitCompare' },
-        ],
-      },
-    },
-  },
-  {
-    slug: 'gitops-observability',
-    title: 'GitOps Observability Platform',
-    subtitle: 'Cloud-Native Monitoring with ArgoCD',
-    confidential: false,
-    badge: null,
-    shortDescription:
-      'A GitOps delivery workflow with ArgoCD paired with Prometheus and Grafana for real-time cluster and application observability.',
-    repoUrl: 'https://github.com/itsakrana/gitops-devops-dashboard.git',
-    repoLabel: 'GitHub',
-    tags: ['ArgoCD', 'Kubernetes', 'Prometheus', 'Grafana', 'GitOps'],
-    metrics: [{ label: 'More consistent deployments', value: '30%' }],
-    highlights: [
-      'Implemented GitOps-driven deployment workflows using ArgoCD with automated sync and rollback',
-      'Integrated Prometheus for Kubernetes cluster monitoring, metrics collection, and alerting',
-      'Designed Grafana dashboards for real-time application and infrastructure observability',
-      'Improved deployment consistency by 30% and minimized manual operational intervention',
-      'Enabled faster incident detection across distributed microservices',
-    ],
-    caseStudy: {
-      overview:
-        'A GitOps-based platform where ArgoCD keeps a Kubernetes cluster in sync with a Git repository, and Prometheus/Grafana provide real-time visibility into what is running.',
-      problem:
-        'Manual deployment and limited visibility into cluster health made it hard to catch issues quickly or trust that the cluster matched what was in Git.',
-      contribution:
-        'I implemented GitOps-driven deployment workflows with ArgoCD, including automated synchronization and rollback. I integrated Prometheus for cluster monitoring, metrics collection, and alerting, and designed Grafana dashboards covering application performance, CPU/memory utilization, and overall system health.',
-      challenges:
-        'Getting ArgoCD sync/rollback behavior and Prometheus alerting rules tuned so that drift and real incidents were caught without generating alert noise.',
-      learned:
-        'How GitOps changes the deployment model — the cluster state is driven by Git, not manual commands — and how pairing that with Prometheus/Grafana observability improves both consistency and incident response.',
-      architecture: {
-        nodes: [
-          { id: 'git', label: 'Git Repository', icon: 'GitBranch' },
-          { id: 'argocd', label: 'ArgoCD Sync', icon: 'RefreshCw' },
-          { id: 'k8s', label: 'Kubernetes Cluster', icon: 'Boxes' },
-          { id: 'prometheus', label: 'Prometheus', icon: 'Activity' },
-          { id: 'grafana', label: 'Grafana Dashboards', icon: 'BarChart3' },
-          { id: 'alerting', label: 'Alerting', icon: 'Bell' },
-        ],
-      },
-    },
-  },
-  {
-    slug: 'microservices-cicd',
-    title: 'Microservices CI/CD Pipeline',
-    subtitle: 'Automated Multi-Service Deployment',
-    confidential: false,
-    badge: null,
-    shortDescription:
-      'An end-to-end CI/CD pipeline automating build, containerization, and Kubernetes deployment for multi-service frontend and backend applications.',
-    repoUrl: 'https://github.com/itsakrana/Microservices_project.git',
-    repoLabel: 'GitHub',
-    tags: ['Docker', 'Kubernetes', 'Jenkins'],
-    metrics: [{ label: 'Faster deployment time', value: '40%' }],
-    highlights: [
-      'Designed and automated CI/CD pipelines for multi-service frontend and backend applications',
-      'Automated source code integration, build workflows, and Docker image creation',
-      'Implemented automated Kubernetes deployments with rollout verification and monitoring',
-      'Enabled end-to-end deployment automation from code commit to production',
-      'Reduced deployment time by 40% and improved release efficiency',
-    ],
-    caseStudy: {
-      overview:
-        'A CI/CD pipeline covering multiple services — separate frontend and backend applications — automating everything from code commit to a verified Kubernetes rollout.',
+        'A local DevOps pipeline for three FastAPI microservices using Terraform, Floci, Docker, kind, Helm, Argo CD, Prometheus, Grafana, and GitHub Actions.',
       problem:
         'Coordinating builds and deployments across separate frontend and backend services manually was slow and made it easy for one service to fall out of sync with another.',
       contribution:
-        'I designed and automated CI/CD pipelines for the multi-service application, automating source integration, build workflows, and Docker image creation for each service. I implemented automated Kubernetes deployments with rollout verification and deployment monitoring, so a bad rollout could be caught rather than silently shipped.',
+        'I built a local DevOps pipeline for three FastAPI microservices using Floci to emulate AWS-compatible services without cloud costs. I used reusable Terraform modules for the AWS-compatible infrastructure and Helm to deploy services to kind.',
       challenges:
-        'Coordinating independent build/deploy pipelines for multiple services while keeping rollout verification meaningful — not just "deployed" but "deployed and healthy."',
+        'Keeping local infrastructure emulation, Kubernetes policy enforcement, GitOps synchronization, and observability coordinated in a low-cost local environment.',
       learned:
-        'How to structure CI/CD for multi-service applications and why rollout verification matters as much as automating the deployment itself — deployment time was cut by 40% end-to-end.',
+        'How to combine local cloud emulation, reusable Terraform modules, Helm, GitOps, and Kubernetes security controls in an end-to-end platform pipeline.',
       architecture: {
         nodes: [
-          { id: 'commit', label: 'Code Commit', icon: 'GitBranch' },
-          { id: 'jenkins', label: 'Jenkins Pipeline', icon: 'Hammer' },
-          { id: 'docker', label: 'Docker Build (FE + BE)', icon: 'Box' },
-          { id: 'k8s', label: 'Kubernetes Deploy', icon: 'Boxes' },
-          { id: 'verify', label: 'Rollout Verification', icon: 'CheckCircle2' },
+          { id: 'terraform', label: 'Terraform + Floci', icon: 'FolderTree' },
+          { id: 'docker', label: 'Docker Services', icon: 'Box' },
+          { id: 'helm', label: 'Helm to kind', icon: 'Package' },
+          { id: 'argocd', label: 'Argo CD GitOps', icon: 'RefreshCw' },
+          { id: 'monitoring', label: 'Prometheus + Grafana', icon: 'Activity' },
+          { id: 'validate', label: 'GitHub Actions + NetworkPolicy', icon: 'ShieldCheck' },
         ],
       },
     },

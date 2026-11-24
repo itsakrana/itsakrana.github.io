@@ -61,6 +61,6 @@ Every subsequent push to `main` redeploys automatically.
 
 ## Before going live
 
-- [ ] Replace `public/resume.pdf` if the resume changes — currently the live version from the linked Google Drive file.
+- [ ] Replace `public/AnkitRana_Resume.pdf` if the resume changes.
 - [ ] Verify project GitHub links in `src/data/projects.js` are still correct.
 - [ ] Run `npm run build && npm run preview` once more and click through every project case study.

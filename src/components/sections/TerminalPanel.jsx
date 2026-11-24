@@ -7,7 +7,7 @@ const LINES = [
   { cmd: 'role', out: 'DevOps Engineer' },
   { cmd: 'focus', out: 'Cloud • Infrastructure • Automation' },
   { cmd: 'stack', out: 'AWS • Azure • Terraform • Docker • Kubernetes • GitHub Actions' },
-  { cmd: 'ai-tools', out: 'Claude Code • AI-assisted DevOps' },
+  { cmd: 'ai-tools', out: 'Claude Code • GitHub Copilot • AI-assisted DevOps' },
 ]
 
 export function TerminalPanel() {

@@ -30,6 +30,38 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@media (max-width: 360px) {
+  .hero-glow-brand {
+    left: 0;
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .hero-glow-accent {
+    right: 0;
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 ::selection {

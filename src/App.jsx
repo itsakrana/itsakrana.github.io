@@ -4,11 +4,12 @@ import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
 import { Hero } from './components/sections/Hero'
 import { About } from './components/sections/About'
-import { WhatIBuild } from './components/sections/WhatIBuild'
+import { ProfessionalExperience } from './components/sections/ProfessionalExperience'
 import { Skills } from './components/sections/Skills'
 import { Projects } from './components/sections/Projects'
 import { DevOpsJourney } from './components/sections/DevOpsJourney'
 import { Contact } from './components/sections/Contact'
+import { BackToTop } from './components/layout/BackToTop'
 
 function App() {
   return (
@@ -19,13 +20,14 @@ function App() {
       <main id="main">
         <Hero />
         <About />
-        <WhatIBuild />
+        <ProfessionalExperience />
         <Skills />
         <Projects />
         <DevOpsJourney />
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </>
   )
 }
